@@ -247,6 +247,45 @@
         </div>
     </footer>
 
+            <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"></script>
+<script>
+// 카카오 SDK 초기화 및 공유 함수
+Kakao.init('110d468a677132abc8ddfe71b00c3939');
+
+function shareLink() {
+    const shareUrl = 'https://tv.drivemoments.kr/';
+    if (navigator.share) {
+        navigator.share({
+            title: 'Drive Moments TV',
+            text: 'Drive Moments TV를 확인해보세요!',
+            url: shareUrl
+        }).catch(console.error);
+    } else {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            alert('링크가 클립보드에 복사되었습니다.');
+        });
+    }
+}
+
+function shareKakao() {
+    Kakao.Share.sendDefault({
+        objectType: 'web',
+        url: 'https://tv.drivemoments.kr/',
+        title: 'Drive Moments TV',
+        description: '새로운 드라이브 모먼츠 TV를 만나보세요!',
+        imageUrl: 'https://tv.drivemoments.kr/thumbnail.jpg',
+        buttons: [
+            {
+                title: '웹으로 이동',
+                link: {
+                    webUrl: 'https://tv.drivemoments.kr/'
+                }
+            }
+        ]
+    });
+}
+</script>
+
     <script src="js/main.js"></script>
 </body>
 </html>

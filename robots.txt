@@ -1,5 +1,2 @@
 User-agent: *
 Allow: /
-Allow: /feed.xml
-
-Sitemap: https://tv.drivemoments.kr/sitemap.xml

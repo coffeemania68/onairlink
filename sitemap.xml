@@ -2,14 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://tv.drivemoments.kr/</loc>
-        <lastmod>2025-01-31</lastmod>  <!-- 날짜는 최신 날짜로 -->
-        <changefreq>daily</changefreq>
+        <lastmod>2025-01-24</lastmod>  <!-- 날짜는 최신 날짜로 -->
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://tv.drivemoments.kr/channels/broadcast.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>daily</changefreq>
+        <lastmod>2025-01-24</lastmod>
         <priority>0.8</priority>
     </url>
-    <url>
+    <urlset>

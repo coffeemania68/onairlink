@@ -47,36 +47,45 @@
         </section>
 
         <!-- 날짜별 프로그램 목록 -->
-        <section>
-            <h2 class="text-2xl font-bold mb-6">방송 프로그램 목록</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6">
-                <div class="flex gap-4 overflow-x-auto pb-4 mb-6">
-                    <button class="date-tab active min-w-[100px] flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100" data-date="2025-01-27">
-                        <span class="text-sm text-gray-500">월요일</span>
-                        <span class="text-2xl font-bold text-gray-900">27</span>
-                        <span class="text-sm text-gray-500">1월</span>
-                    </button>
-                    <button class="date-tab min-w-[100px] flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100" data-date="2025-01-28">
-                        <span class="text-sm text-gray-500">화요일</span>
-                        <span class="text-2xl font-bold text-gray-900">28</span>
-                        <span class="text-sm text-gray-500">1월</span>
-                    </button>
-                    <button class="date-tab min-w-[100px] flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100" data-date="2025-01-29">
-                        <span class="text-sm text-gray-500">수요일</span>
-                        <span class="text-2xl font-bold text-gray-900">29</span>
-                        <span class="text-sm text-gray-500">1월</span>
-                    </button>
-                    <button class="date-tab min-w-[100px] flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100" data-date="2025-01-30">
-                        <span class="text-sm text-gray-500">목요일</span>
-                        <span class="text-2xl font-bold text-gray-900">30</span>
-                        <span class="text-sm text-gray-500">1월</span>
-                    </button>
-                </div>
+       <!-- 날짜별 프로그램 목록 -->
+<section>
+    <h2 class="text-2xl font-bold mb-6">방송 프로그램 목록</h2>
+    <div class="bg-white rounded-xl shadow-lg p-6">
+        <div class="grid grid-cols-4 gap-3 mb-6">
+            <button class="date-tab active flex flex-col items-center p-3 rounded-xl bg-rose-50 hover:bg-rose-100 transition-all" data-date="2025-01-27">
+                <span class="text-sm text-gray-500">월요일</span>
+                <span class="text-xl font-bold text-rose-600">27</span>
+                <span class="text-sm text-gray-500">1월</span>
+            </button>
+            <button class="date-tab flex flex-col items-center p-3 rounded-xl bg-sky-50 hover:bg-sky-100 transition-all" data-date="2025-01-28">
+                <span class="text-sm text-gray-500">화요일</span>
+                <span class="text-xl font-bold text-sky-600">28</span>
+                <span class="text-sm text-gray-500">1월</span>
+            </button>
+            <button class="date-tab flex flex-col items-center p-3 rounded-xl bg-violet-50 hover:bg-violet-100 transition-all" data-date="2025-01-29">
+                <span class="text-sm text-gray-500">수요일</span>
+                <span class="text-xl font-bold text-violet-600">29</span>
+                <span class="text-sm text-gray-500">1월</span>
+            </button>
+            <button class="date-tab flex flex-col items-center p-3 rounded-xl bg-amber-50 hover:bg-amber-100 transition-all" data-date="2025-01-30">
+                <span class="text-sm text-gray-500">목요일</span>
+                <span class="text-xl font-bold text-amber-600">30</span>
+                <span class="text-sm text-gray-500">1월</span>
+            </button>
+        </div>
 
-                <div id="program-list" class="space-y-4">
-                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
-                </div>
+        <div id="program-list" class="space-y-4">
+            <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
+        </div>
+
+        <!-- 광고 고지 및 인사말 -->
+        <div class="mt-8 space-y-4">
+            <div class="bg-gray-50 p-4 rounded-lg text-gray-600 text-sm">
+                <p class="mb-2">※ 실시간 방송 시청 시 각 방송사의 광고(15~30초)가 송출될 수 있습니다.</p>
+                <p>즐겁고 행복한 설 연휴 보내세요! 🎊</p>
             </div>
+        </div>
+    </div>
         </section>
     </main>
 

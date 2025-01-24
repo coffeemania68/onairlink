@@ -1,15 +1,21 @@
 {
-    "name": "K-트로트 방송 허브",
-    "short_name": "K-트로트",
-    "icons": [
-        {
-            "src": "https://blog.kakaocdn.net/dn/zBKrY/btsLG7rQdsy/JBHEyfJJFTz2luLDoqxQa1/img.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
-    ],
-    "start_url": "/index.html",
+    "name": "2025 설날 특선 TV",
+    "short_name": "설날특선TV",
+    "description": "2025 설날 특선 영화 및 프로그램 편성표",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#ffffff"
+    "theme_color": "#ffffff",
+    "icons": [
+        {
+            "src": "https://blog.kakaocdn.net/dn/c8ybO7/btsLZdzSg6R/pbEiLYKSPCVJ2GRP9iWiSk/img.jpg",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://blog.kakaocdn.net/dn/b5K53Z/btsLZIlOpFj/HKVlawYNxVty570CLeXaNk/img.jpg",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
 }

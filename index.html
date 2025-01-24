@@ -3,330 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="T-4SejcycK7UBtOex5du3S_HCtZachy4VTR2eK9UXyk" />
-    <title>K-트로트 방송 허브</title>
-     <!-- 홈화면 아이콘 설정 -->
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for trot.drivemoments.kr" href="/feed.xml">
+    <title>2025 설날 특선 프로그램 - TV 편성표 모음</title>
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="2025 설날 특선 영화 및 프로그램 편성표 - KBS, MBC, SBS, 종편 실시간 시청">
+    <link rel="canonical" href="https://tv.drivemoments.kr">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for tv.drivemoments.kr" href="/feed.xml">
+
+    <!-- 홈화면 아이콘 설정 -->
     <link rel="apple-touch-icon" href="https://blog.kakaocdn.net/dn/zBKrY/btsLG7rQdsy/JBHEyfJJFTz2luLDoqxQa1/img.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="K-트로트 허브">
+    <meta name="apple-mobile-web-app-title" content="설날특선 TV">
 
     <!-- Android용 설정 -->
     <link rel="shortcut icon" href="https://blog.kakaocdn.net/dn/zBKrY/btsLG7rQdsy/JBHEyfJJFTz2luLDoqxQa1/img.png">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="manifest" href="manifest.json">  
-    <script src="https://cdn.tailwindcss.com"></script>
-  
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('a[target="_blank"]');
-    links.forEach(link => link.removeAttribute('target'));
-});
-</script>
+    <link rel="manifest" href="manifest.json">
 
-<!-- 광고 클릭 제한 관리 코드 -->
-<script>
-const AdClickManager = {
-    storageKey: 'adClickCount',
-    maxClicksPerDay: 3, // 하루 최대 클릭 횟수
-    
-    initClickCount: function() {
-        const today = new Date().toDateString();
-        const stored = localStorage.getItem(this.storageKey);
-        
-        if (!stored || JSON.parse(stored).date !== today) {
-            localStorage.setItem(this.storageKey, JSON.stringify({
-                date: today,
-                count: 0
-            }));
-        }
-    },
-    
-    canClick: function() {
-        const stored = JSON.parse(localStorage.getItem(this.storageKey));
-        return stored.count < this.maxClicksPerDay;
-    },
-    
-    incrementClick: function() {
-        const stored = JSON.parse(localStorage.getItem(this.storageKey));
-        stored.count += 1;
-        localStorage.setItem(this.storageKey, JSON.stringify(stored));
-    }
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-    AdClickManager.initClickCount();
-    
-    // 광고 요소들에 클릭 이벤트 리스너 추가
-    document.querySelectorAll('.adsbygoogle').forEach(ad => {
-        ad.addEventListener('click', function(e) {
-            if (!AdClickManager.canClick()) {
-                e.preventDefault();
-                alert('오늘의 광고 클릭 한도를 초과했습니다. 내일 다시 시도해주세요.');
-                return false;
-            }
-            AdClickManager.incrementClick();
-        });
-    });
-});
-
-// 매일 자정에 클릭 카운트 초기화
-setInterval(() => {
-    const now = new Date();
-    if (now.getHours() === 0 && now.getMinutes() === 0) {
-        AdClickManager.initClickCount();
-    }
-}, 60000); // 1분마다 체크
-</script>
-    
-<!-- 프리뷰 컨테이너 설정 -->
+    <!-- 소셜 미디어 메타 태그 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tv.drivemoments.kr">
+    <meta property="og:title" content="2025 설날 특선 프로그램 편성표">
+    <meta property="og:description" content="설날 특선 영화, 예능, 드라마 편성표 및 실시간 시청 안내">
     <meta property="og:image" content="https://blog.kakaocdn.net/dn/zBKrY/btsLG7rQdsy/JBHEyfJJFTz2luLDoqxQa1/img.png">
-    <meta property="og:title" content="K-트롯 방송 허브 | 한일톱텐쇼•현역가왕2•미스터트롯3">
-    <meta property="og:description" content="본방사수 시간 알림 ● 실시간 시청 ● 투표 참여 ● 국민판정단 신청">
 
-    <!-- Google AdSense 자동 광고 코드 -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- 홈화면 아이콘 설정 -->
+    <link rel="apple-touch-icon" href="https://blog.kakaocdn.net/dn/c8ybO7/btsLZdzSg6R/pbEiLYKSPCVJ2GRP9iWiSk/img.jpg">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="설날특선 TV">
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://blog.kakaocdn.net/dn/b5K53Z/btsLZIlOpFj/HKVlawYNxVty570CLeXaNk/img.jpg">
+    <link rel="shortcut icon" href="https://blog.kakaocdn.net/dn/b5K53Z/btsLZIlOpFj/HKVlawYNxVty570CLeXaNk/img.jpg">
+
+    <!-- 소셜 미디어 공유용 메타 태그 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tv.drivemoments.kr">
+    <meta property="og:title" content="2025 설날 특선 프로그램 편성표">
+    <meta property="og:description" content="설날 특선 영화, 예능, 드라마 편성표 및 실시간 시청 안내">
+    <meta property="og:image" content="https://blog.kakaocdn.net/dn/Z85X0/btsLZmQTvAo/RUhEgxkt4ATxok0BmpmUN1/img.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- 트위터 카드 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://blog.kakaocdn.net/dn/Z85X0/btsLZmQTvAo/RUhEgxkt4ATxok0BmpmUN1/img.jpg">
+    
 </head>
 
-<body class="bg-gray-50">
+    <body class="bg-gray-50">
+    <!-- 광고 컨테이너 -->
+    <div id="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7488656479974609"
+             data-ad-slot="자동광고슬롯"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
     <header id="main-header" class="bg-white shadow-sm fixed w-full z-40">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="text-xl font-bold">
-                <a href="index.html">K-트로트 방송 허브</a>
+                <a href="index.html">2025 설날 특선 TV</a>
             </div>
-            <ul class="flex space-x-8">
-                <li><a href="index.html" class="text-red-600">홈</a></li>
-                <li><a href="live.html" class="hover:text-red-600">생방송</a></li>
-                <li><a href="community.html" class="hover:text-red-600">커뮤니티</a></li>
-            </ul>
+            <div class="flex space-x-4">
+                <button class="date-tab active px-4 py-2 rounded-lg text-sm" data-date="2025-01-27">
+                    1월 27일
+                </button>
+                <button class="date-tab px-4 py-2 rounded-lg text-sm" data-date="2025-01-28">
+                    1월 28일
+                </button>
+                <button class="date-tab px-4 py-2 rounded-lg text-sm" data-date="2025-01-29">
+                    1월 29일
+                </button>
+                <button class="date-tab px-4 py-2 rounded-lg text-sm" data-date="2025-01-30">
+                    1월 30일
+                </button>
+            </div>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content">
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">   
-            <!-- 한일톱텐쇼 -->
-            <div class="bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
-                <h3 class="text-2xl font-bold mb-4">한일톱텐쇼</h3>
-                <p class="mb-2">매주 월요일 저녁 8시</p>
-                <div class="countdown mb-6 bg-red-600/30 p-2 rounded-lg text-center" data-day="1" data-hour="20">
-                    다음 방송까지: <span>00일 00시간 00분</span>
+    <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- 방송사별 섹션 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
+            <!-- KBS -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-red-600 p-4 text-white">
+                    <h2 class="text-xl font-bold">KBS</h2>
+                    <a href="https://naver.me/FWJUsmCX" 
+                       class="inline-block mt-2 px-4 py-2 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">
+                        실시간 시청하기
+                    </a>
                 </div>
-                <div class="space-y-4">
-                    <a href="live.html" 
-                       class="block w-full py-3 px-4 bg-white text-red-600 rounded-lg text-center font-semibold hover:bg-red-50 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <div>
-                        <div class="vote-countdown text-sm text-white/90 mb-2 bg-red-600/30 p-2 rounded-lg text-center" data-day="0" data-hour="10">
-                            투표마감: <span>00일 00시간 00분</span>
-                        </div>
-                        <a href="https://m.site.naver.com/1o4iW" 
-                           class="block w-full py-3 px-4 bg-red-800 text-white rounded-lg text-center font-semibold hover:bg-red-900 transform hover:rotate-1 transition-all">
-                            투표하기
-                        </a>
-                    </div>
-                    <a href="#" 
-                       class="block w-full py-3 px-4 bg-red-900 text-white rounded-lg text-center font-semibold hover:bg-red-950 transform hover:scale-105 transition-all">
-                        국민판정단 신청
-                    </a>
+                <div class="program-list p-4" id="kbs-programs">
+                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
                 </div>
             </div>
 
-            <!-- 현역가왕2 -->
-            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
-                <h3 class="text-2xl font-bold mb-4">현역가왕2</h3>
-                <p class="mb-2">매주 화요일 저녁 9시</p>
-                <div class="countdown mb-6 bg-purple-600/30 p-2 rounded-lg text-center" data-day="2" data-hour="21">
-                    다음 방송까지: <span>00일 00시간 00분</span>
+            <!-- MBC -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-blue-600 p-4 text-white">
+                    <h2 class="text-xl font-bold">MBC</h2>
+                    <a href="https://naver.me/xXrv590N" 
+                       class="inline-block mt-2 px-4 py-2 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">
+                        실시간 시청하기
+                    </a>
                 </div>
-                <div class="space-y-4">
-                    <a href="live.html" 
-                       class="block w-full py-3 px-4 bg-white text-purple-600 rounded-lg text-center font-semibold hover:bg-purple-50 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <div>
-                        <div class="vote-countdown text-sm text-white/90 mb-2 bg-purple-600/30 p-2 rounded-lg text-center" data-deadline="2024-02-18T23:59:59">
-                            투표마감: <span>00일 00시간 00분</span>
-                        </div>
-                        <a href="https://drivemoments.kr/%ed%98%84%ec%97%ad%ea%b0%80%ec%99%952-%eb%82%a8%ec%9e%90%ed%8e%b8-%eb%b0%a9%ec%86%a1-%ec%9d%bc%ec%a0%95-%ec%b6%9c%ec%97%b0%ec%a7%84-%ed%88%ac%ed%91%9c-%eb%b0%a9%eb%b2%95-%ec%b4%9d%ec%a0%95%eb%a6%ac/" 
-                           class="block w-full py-3 px-4 bg-purple-800 text-white rounded-lg text-center font-semibold hover:bg-purple-900 transform hover:rotate-1 transition-all">
-                            투표하기
-                        </a>
-                    </div>
-                    <a href="https://drivemoments.kr/현역가왕2-국민판정단-모집/" 
-                       class="block w-full py-3 px-4 bg-purple-900 text-white rounded-lg text-center font-semibold hover:bg-purple-950 transform hover:scale-105 transition-all">
-                        국민판정단 신청
-                    </a>
+                <div class="program-list p-4" id="mbc-programs">
+                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
                 </div>
             </div>
 
-            <!-- 미스터트롯3 -->
-            <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 rounded-xl p-8 text-white transform hover:scale-105 transition-all shadow-lg">
-                <h3 class="text-2xl font-bold mb-4">미스터트롯3</h3>
-                <p class="mb-2">매주 목요일 저녁 10시</p>
-                <div class="countdown mb-6 bg-indigo-600/30 p-2 rounded-lg text-center" data-day="4" data-hour="22">
-                    다음 방송까지: <span>00일 00시간 00분</span>
+            <!-- SBS -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-orange-600 p-4 text-white">
+                    <h2 class="text-xl font-bold">SBS</h2>
+                    <a href="https://naver.me/FJHYQIPf" 
+                       class="inline-block mt-2 px-4 py-2 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">
+                        실시간 시청하기
+                    </a>
                 </div>
-               <!-- 미스터트롯3 카드의 투표 부분 -->
-<div class="space-y-4">
-    <a href="live.html" 
-       class="block w-full py-3 px-4 bg-white text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-50 transform hover:-translate-y-1 transition-all">
-        생방송 보기
-    </a>
-    <div>
-        <div class="vote-countdown text-sm text-white/90 mb-2 bg-indigo-600/30 p-2 rounded-lg text-center">
-            투표마감: 3월 14일까지
-        </div>
-        <a href="https://m.entertain.naver.com/poll/polling?id=298&serviceId=1" 
-           class="block w-full py-3 px-4 bg-indigo-800 text-white rounded-lg text-center font-semibold hover:bg-indigo-900 transform hover:rotate-1 transition-all">
-            투표하기
-        </a>
-    </div>
-    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b0%a9%ec%b2%ad%ea%b0%9d-%eb%aa%a8%ec%a7%91/" 
-       class="block w-full py-3 px-4 bg-indigo-900 text-white rounded-lg text-center font-semibold hover:bg-indigo-950 transform hover:scale-105 transition-all">
-        국민판정단 신청
-    </a>
-</div>
+                <div class="program-list p-4" id="sbs-programs">
+                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
+                </div>
+            </div>
+
+            <!-- 종편 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="bg-purple-600 p-4 text-white">
+                    <h2 class="text-xl font-bold">종편</h2>
+                    <div class="flex gap-2 mt-2">
+                        <a href="https://naver.me/IFKhECD1" class="px-3 py-1 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">JTBC</a>
+                        <a href="https://naver.me/5FhmQnMU" class="px-3 py-1 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">TV조선</a>
+                        <a href="https://naver.me/GrA3Ec3W" class="px-3 py-1 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-all">MBN</a>
+                    </div>
+                </div>
+                <div class="program-list p-4" id="cable-programs">
+                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
+                </div>
             </div>
         </div>
 
-        <!-- Google AdSense 자동 광고 코드 -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7488656479974609"
-     crossorigin="anonymous"></script>  
-
-        <!-- 카카오 채널 섹션 -->
-        <div class="mt-12 bg-yellow-400 rounded-xl p-8 transform hover:scale-105 transition-all shadow-lg">
-            <a href="http://pf.kakao.com/_xixnbtG/107843223" 
-               class="block text-center text-gray-900 font-bold text-xl">
-                📱 카카오톡 친구추가하고 소식 받기
+        <!-- 프로그램 상세 정보 링크 -->
+        <div class="text-center mb-8">
+            <a href="https://drivemoments.kr/2025-%ec%84%a4-%ed%8a%b9%ec%84%a0-%ec%98%81%ed%99%94-%eb%b0%8f-%ed%8a%b9%ec%84%a0-%ed%94%84%eb%a1%9c%ea%b7%b8%eb%9e%a8-%ec%83%81%ec%84%b8-%ed%8e%98%ec%9d%b4%ec%a7%80-%eb%aa%a8%ec%9d%8c/"
+               class="inline-block px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition-all">
+                프로그램 상세 정보 보기
             </a>
         </div>
     </main>
-   <script>
-// 광고 레이아웃 조정
-function adjustLayout() {
-    const adContainer = document.getElementById('ad-container');
-    const header = document.getElementById('main-header');
-    const mainContent = document.getElementById('main-content');
-    
-    // 광고가 로드된 후 높이 체크
-    if (adContainer.offsetHeight > 0) {
-        header.style.top = adContainer.offsetHeight + 'px';
-        mainContent.style.marginTop = (adContainer.offsetHeight + 64) + 'px';
-    } else {
-        // 광고가 아직 로드되지 않았거나 차단된 경우
-        header.style.top = '0px';
-        mainContent.style.marginTop = '64px';
-    }
-}
-
-// 광고 로드 완료 시 레이아웃 조정
-window.addEventListener('load', function() {
-    setTimeout(adjustLayout, 1000); // 광고 로드 시간 고려
-});
-
-// 화면 크기 변경 시 레이아웃 조정
-window.addEventListener('resize', adjustLayout);
-
-// 주기적으로 광고 높이 체크
-setInterval(adjustLayout, 2000);
-</script>
 
     <footer class="bg-gray-100 mt-12 py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-        <p>&copy; 2025 K-트로트 방송 허브</p>
-        <div class="mt-3 text-sm space-y-2 sm:space-y-0 sm:flex sm:items-center sm:justify-center sm:gap-4">
-            <p>웹사이트 제작: <a href="https://drivemoments.kr" class="text-blue-600 hover:text-blue-800">DriveM</a></p>
-            <div class="hidden sm:block text-gray-400">|</div>
-            <p>문의: <a href="mailto:yourmoments@gmail.com" class="hover:text-gray-800">yourmoments@gmail.com</a></p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
+            <p>&copy; 2025 설날특선 TV</p>
+            <div class="mt-3 text-sm space-y-2 sm:space-y-0 sm:flex sm:items-center sm:justify-center sm:gap-4">
+                <p>웹사이트 제작: <a href="https://drivemoments.kr" class="text-blue-600 hover:text-blue-800">DriveM</a></p>
+                <div class="hidden sm:block text-gray-400">|</div>
+                <p>문의: <a href="mailto:yourmoments@gmail.com" class="hover:text-gray-800">yourmoments@gmail.com</a></p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-    <script>
-        // 방송 카운트다운
-        function updateBroadcastCountdowns() {
-            document.querySelectorAll('.countdown[data-day][data-hour]').forEach(countdown => {
-                const targetDay = parseInt(countdown.dataset.day);
-                const targetHour = parseInt(countdown.dataset.hour);
-                
-                const now = new Date();
-                const nextShow = getNextShowTime(targetDay, targetHour);
-                const timeLeft = nextShow - now;
-                
-                updateCountdownDisplay(countdown, timeLeft);
-            });
-        }
-
-        // 투표 카운트다운
-        function updateVoteCountdowns() {
-            // 한일톱텐쇼 - 매주 일요일 10시
-            document.querySelectorAll('.vote-countdown[data-day="0"][data-hour="10"]').forEach(countdown => {
-                const now = new Date();
-                const nextSunday = new Date();
-                nextSunday.setDate(now.getDate() + (7 - now.getDay()));
-                nextSunday.setHours(10, 0, 0, 0);
-                
-                if (now > nextSunday) {
-                    nextSunday.setDate(nextSunday.getDate() + 7);
-                }
-                
-                const timeLeft = nextSunday - now;
-                updateCountdownDisplay(countdown, timeLeft);
-            });
-
-            // JavaScript 부분에서 현역가왕2 투표 카운트다운 로직 수정
-document.querySelectorAll('.vote-countdown[data-deadline]').forEach(countdown => {
-    const deadline = new Date(countdown.dataset.deadline);
-    const now = new Date();
-    const timeLeft = deadline - now;
-    
-    if (timeLeft > 0) {  // 아직 시간이 남아있음
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        
-        countdown.querySelector('span').textContent = 
-            `${days}일 ${hours}시간 ${minutes}분`;
-    } else {
-        countdown.querySelector('span').textContent = "2월 18일까지";
-    }
-});
-        }
-
-        function getNextShowTime(targetDay, targetHour) {
-            const now = new Date();
-            let nextShow = new Date();
-            nextShow.setHours(targetHour, 0, 0, 0);
-            
-            let daysUntilShow = targetDay - now.getDay();
-            if (daysUntilShow < 0 || (daysUntilShow === 0 && now.getHours() >= targetHour)) {
-                daysUntilShow += 7;
-            }
-            
-            nextShow.setDate(nextShow.getDate() + daysUntilShow);
-            return nextShow;
-        }
-
-        function updateCountdownDisplay(element, timeLeft) {
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            
-            element.querySelector('span').textContent = 
-                `${days}일 ${hours}시간 ${minutes}분`;
-        }
-
-        // 1분마다 카운트다운 업데이트
-        setInterval(() => {
-            updateBroadcastCountdowns();
-            updateVoteCountdowns();
-        }, 60000);
-
-        // 초기 실행
-        updateBroadcastCountdowns();
-        updateVoteCountdowns();
-    </script>
+    <script src="js/main.js"></script>
 </body>
-</html>

@@ -63,13 +63,68 @@ const BROADCAST_LINKS = {
     MBN: "https://naver.me/GrA3Ec3W"
 };
 
-// 초기화
-document.addEventListener('DOMContentLoaded', () => {
-    initializeDateTabs();
-    setupMobileMenu();
-    setupLazyLoading();
-    adjustLayout();
+// 기존 코드 유지
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // 기존 초기화 코드들
+        initializeDateTabs();
+        setupMobileMenu();
+        setupLazyLoading();
+        adjustLayout();
+
+        // 카카오 SDK 로드 및 초기화 추가
+        await loadKakaoSDK();
+        Kakao.init('110d468a677132abc8ddfe71b00c3939');
+    } catch (error) {
+        console.error('Kakao SDK 로드 실패', error);
+    }
 });
+
+// SDK 로드 함수 추가
+function loadKakaoSDK() {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js';
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
+// 공유 함수 추가
+function shareLink() {
+    const shareUrl = 'https://tv.drivemoments.kr/';
+    if (navigator.share) {
+        navigator.share({
+            title: 'Drive Moments TV',
+            text: 'Drive Moments TV를 확인해보세요!',
+            url: shareUrl
+        }).catch(console.error);
+    } else {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            alert('링크가 클립보드에 복사되었습니다.');
+        });
+    }
+}
+
+function shareKakao() {
+    Kakao.Share.sendDefault({
+        objectType: 'web',
+        url: 'https://tv.drivemoments.kr/',
+        title: 'Drive Moments TV',
+        description: '새로운 드라이브 모먼츠 TV를 만나보세요!',
+        imageUrl: 'https://tv.drivemoments.kr/thumbnail.jpg',
+        buttons: [
+            {
+                title: '웹으로 이동',
+                link: {
+                    webUrl: 'https://tv.drivemoments.kr/'
+                }
+            }
+        ]
+    });
+}
 
 // 날짜 탭 초기화
 function initializeDateTabs() {

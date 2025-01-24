@@ -3,104 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for trot.drivemoments.kr" href="/feed.xml">
-    <title>생방송 보기 - K-트로트 방송 허브</title>
+    <title>실시간 방송 - 2025 설날 특선 TV</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- 파비콘 등 기존 메타태그들 유지 -->
 </head>
-<body class="bg-gray-50">
-    <header class="bg-white shadow-sm">
+<body class="bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white min-h-screen">
+    <header class="bg-black/30 backdrop-blur-md fixed w-full z-50 top-0">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <div class="text-xl font-bold">
-                <a href="index.html">K-트로트 방송 허브</a>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-white/80 hover:text-white transition-colors">
+                    ← 메인으로
+                </a>
+                <h1 class="text-xl font-bold">실시간 방송</h1>
             </div>
-            <ul class="flex space-x-8">
-                <li><a href="index.html" class="hover:text-red-600">홈</a></li>
-                <li><a href="live.html" class="text-red-600">생방송</a></li>
-                <li><a href="community.html" class="hover:text-red-600">커뮤니티</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <!-- 생방송 헤더 -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">생방송 보기</h1>
-            <p class="text-xl text-gray-600">각 프로그램의 생방송과 다시보기를 시청하실 수 있습니다</p>
+    <main class="pt-24 pb-12">
+        <!-- 방송사 선택 탭 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+            <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                <button class="broadcast-tab active min-w-[120px] px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-all" data-channel="all">
+                    전체보기
+                </button>
+                <button class="broadcast-tab min-w-[120px] px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 transition-all" data-channel="kbs">
+                    KBS
+                </button>
+                <!-- 다른 방송사 탭들 -->
+            </div>
         </div>
 
-        <!-- 생방송 카드 섹션 -->
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <!-- 한일톱텐쇼 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="bg-gradient-to-r from-red-500 to-red-700 p-6 text-white">
-                    <h2 class="text-2xl font-bold mb-2">한일톱텐쇼</h2>
-                    <p class="text-red-100">매주 월요일 저녁 8시</p>
-                </div>
-                <div class="p-6 space-y-4">
-                    <div class="countdown text-center text-lg font-semibold text-red-600" data-day="1" data-hour="20">
-                        다음 방송까지 남은 시간
-                    </div>
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg text-center font-semibold hover:bg-red-700 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-3 px-4 bg-red-100 text-red-600 rounded-lg text-center font-semibold hover:bg-red-200 transition-all">
-                        다시보기
-                    </a>
+        <!-- 날짜 선택 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div class="date-slider relative">
+                <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+                    <!-- 날짜 버튼들... -->
                 </div>
             </div>
+        </div>
 
-            <!-- 현역가왕2 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="bg-gradient-to-r from-purple-500 to-purple-700 p-6 text-white">
-                    <h2 class="text-2xl font-bold mb-2">현역가왕2</h2>
-                    <p class="text-purple-100">매주 화요일 저녁 9시</p>
-                </div>
-                <div class="p-6 space-y-4">
-                    <div class="countdown text-center text-lg font-semibold text-purple-600" data-day="2" data-hour="21">
-                        다음 방송까지 남은 시간
-                    </div>
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-3 px-4 bg-purple-600 text-white rounded-lg text-center font-semibold hover:bg-purple-700 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <a href="https://drivemoments.kr/%ED%98%84%EC%97%AD%EA%B0%80%EC%99%952-%EB%82%A8%EC%9E%90-%EB%8B%A4%EC%8B%9C%EB%B3%B4%EA%B8%B0-%ED%8E%B8%EC%84%B1%ED%91%9C-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0-%EC%98%A8/" 
-                       class="block w-full py-3 px-4 bg-purple-100 text-purple-600 rounded-lg text-center font-semibold hover:bg-purple-200 transition-all">
-                        다시보기
-                    </a>
-                </div>
-            </div>
-
-            <!-- 미스터트롯3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-                <div class="bg-gradient-to-r from-indigo-500 to-indigo-700 p-6 text-white">
-                    <h2 class="text-2xl font-bold mb-2">미스터트롯3</h2>
-                    <p class="text-indigo-100">매주 목요일 저녁 10시</p>
-                </div>
-                <div class="p-6 space-y-4">
-                    <div class="countdown text-center text-lg font-semibold text-indigo-600" data-day="4" data-hour="22">
-                        다음 방송까지 남은 시간
-                    </div>
-                    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b3%b8%eb%b0%a9%ec%82%ac%ec%88%98-%ed%95%b8%eb%93%9c%ed%8f%b0-%ec%8b%a4%ec%8b%9c%ea%b0%84/" 
-                       class="block w-full py-3 px-4 bg-indigo-600 text-white rounded-lg text-center font-semibold hover:bg-indigo-700 transform hover:-translate-y-1 transition-all">
-                        생방송 보기
-                    </a>
-                    <a href="https://drivemoments.kr/%eb%af%b8%ec%8a%a4%ed%84%b0%ed%8a%b8%eb%a1%af3-%eb%b3%b8%eb%b0%a9%ec%82%ac%ec%88%98-%ed%95%b8%eb%93%9c%ed%8f%b0-%ec%8b%a4%ec%8b%9c%ea%b0%84/" 
-                       class="block w-full py-3 px-4 bg-indigo-100 text-indigo-600 rounded-lg text-center font-semibold hover:bg-indigo-200 transition-all">
-                        다시보기
-                    </a>
-                </div>
+        <!-- 프로그램 그리드 -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="program-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 프로그램 카드들이 동적으로 생성됨 -->
             </div>
         </div>
     </main>
 
-    <footer class="bg-gray-100 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-            <p>&copy; 2024 K-트로트 방송 허브</p>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <script>
+        // AOS 초기화
+        AOS.init();
+    </script>
+    <script src="js/live.js"></script>
 </body>
 </html>

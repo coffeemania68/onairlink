@@ -3,117 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>현역가왕2 - K-트로트 방송 허브</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <title>지상파 방송 프로그램 - 2025 설날 특선 TV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- 헤더 -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="logo">
-                <a href="../index.html">
-                    <img src="../images/logo/site-logo.png" alt="K-트로트 허브">
+<body class="bg-gray-50">
+    <header class="bg-white shadow-sm fixed w-full z-40">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="../index.html" class="text-gray-600 hover:text-gray-900">
+                    ← 메인으로
                 </a>
+                <h1 class="text-xl font-bold">지상파 방송 프로그램</h1>
             </div>
-            <ul class="nav-links">
-                <li><a href="../index.html">홈</a></li>
-                <li><a href="../live.html">생방송</a></li>
-                <li><a href="../community.html">커뮤니티</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main class="show-page">
-        <!-- 프로그램 헤더 -->
-        <section class="show-header king-header">
-            <div class="show-info">
-                <h1>현역가왕2</h1>
-                <p class="broadcast-time">매주 화요일 저녁 9시</p>
-                <div class="countdown" data-day="2" data-hour="21"></div>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16">
+        <!-- 실시간 시청 링크 섹션 -->
+        <section class="mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="https://naver.me/FWJUsmCX" target="_blank"
+                   class="bg-red-600 text-white p-6 rounded-xl text-center hover:bg-red-700 transition-all">
+                    <h2 class="text-xl font-bold mb-2">KBS</h2>
+                    <p class="text-sm text-white/80">실시간 시청하기</p>
+                </a>
+                
+                <a href="https://naver.me/xXrv590N" target="_blank"
+                   class="bg-blue-600 text-white p-6 rounded-xl text-center hover:bg-blue-700 transition-all">
+                    <h2 class="text-xl font-bold mb-2">MBC</h2>
+                    <p class="text-sm text-white/80">실시간 시청하기</p>
+                </a>
+                
+                <a href="https://naver.me/FJHYQIPf" target="_blank"
+                   class="bg-orange-600 text-white p-6 rounded-xl text-center hover:bg-orange-700 transition-all">
+                    <h2 class="text-xl font-bold mb-2">SBS</h2>
+                    <p class="text-sm text-white/80">실시간 시청하기</p>
+                </a>
             </div>
         </section>
 
-        <!-- 주요 링크 -->
-        <section class="show-links">
-            <div class="link-buttons">
-                <a href="#" class="action-button vote-button" target="_blank">
-                    실시간 투표하기
-                </a>
-                <a href="#" class="action-button live-button" target="_blank">
-                    생방송 보기
-                </a>
-            </div>
-        </section>
-
-        <!-- 현재 가왕 정보 -->
-        <section class="current-king">
-            <h2>현재 가왕</h2>
-            <div class="king-info">
-    <div class="king-image">
-        <img src="https://blog.kakaocdn.net/dn/P0pqy/btsLFYvPOvo/K9xGtJga0RrxsmuDUP3csk/img.png" alt="현재 가왕">
-    </div>
-                <div class="king-details">
-                    <h3>가왕명</h3>
-                    <p class="reign-count">연속 N주차</p>
-                    <p class="win-count">총 N승</p>
+        <!-- 날짜별 프로그램 목록 -->
+        <section>
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="flex gap-4 overflow-x-auto pb-4 mb-6">
+                    <button class="date-tab active min-w-[100px] flex flex-col items-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100" data-date="2025-01-27">
+                        <span class="text-sm text-gray-500">일요일</span>
+                        <span class="text-2xl font-bold text-gray-900">27</span>
+                        <span class="text-sm text-gray-500">1월</span>
+                    </button>
+                    <!-- 다른 날짜 탭들 -->
                 </div>
-            </div>
-        </section>
 
-        <!-- 이번 주 방송 정보 -->
-        <section class="this-week">
-            <h2>이번 주 방송</h2>
-            <div class="episode-info">
-                <div class="date">2024.01.09 (화) 21:00</div>
-                <h3>도전자 라인업</h3>
-                <div class="challengers">
-                    <!-- 도전자 목록 -->
-                    <div class="challenger-item">
-                        <span class="challenger-name">도전자1</span>
-                        <span class="song-title">도전곡명</span>
-                    </div>
-                    <!-- 추가 도전자들 -->
+                <div id="program-list" class="space-y-8">
+                    <!-- 프로그램 목록은 JavaScript로 동적 생성 -->
                 </div>
-            </div>
-        </section>
-
-        <!-- 역대 가왕 기록 -->
-        <section class="king-history">
-            <h2>역대 가왕</h2>
-            <div class="history-container">
-                <!-- 역대 가왕 기록 -->
-                <div class="history-item">
-                    <span class="period">1대</span>
-                    <span class="king-name">가왕명</span>
-                    <span class="reign-period">재위기간</span>
-                </div>
-                <!-- 추가 기록들 -->
-            </div>
-        </section>
-
-        <!-- 커뮤니티 링크 -->
-        <section class="community-links">
-            <h2>팬 커뮤니티</h2>
-            <div class="community-grid">
-                <a href="#" class="community-card naver">
-                    <img src="../images/icons/naver.png" alt="네이버">
-                    <span>네이버 카페</span>
-                </a>
-                <a href="#" class="community-card daum">
-                    <img src="../images/icons/daum.png" alt="다음">
-                    <span>다음 카페</span>
-                </a>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2024 K-트로트 방송 허브</p>
-        </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
+    <script>
+        // 프로그램 데이터와 표시 로직은 별도의 JS 파일로 분리
+    </script>
 </body>
 </html>

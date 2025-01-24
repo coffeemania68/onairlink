@@ -181,3 +181,45 @@ window.addEventListener('error', (e) => {
     console.error('JavaScript 에러:', e.message);
     // 필요한 경우 사용자에게 에러 알림
 });
+
+// 설날 main.js 시작
+ 
+// 방송사별 온에어 링크
+const BROADCAST_LINKS = {
+    KBS: "https://naver.me/FWJUsmCX",
+    MBC: "https://naver.me/xXrv590N",
+    SBS: "https://naver.me/FJHYQIPf",
+    JTBC: "https://naver.me/IFKhECD1",
+    TV_CHOSUN: "https://naver.me/5FhmQnMU",
+    MBN: "https://naver.me/GrA3Ec3W"
+};
+
+// 영화/공연 데이터
+const holidayMovies = {
+    "2025-01-27": [
+        {
+            time: "10:45",
+            title: "리바운드",
+            channel: "MBC",
+            imageUrl: "[이미지URL]",
+            category: "영화"
+        },
+        {
+            time: "17:15",
+            title: "콘크리트 유토피아",
+            channel: "SBS",
+            imageUrl: "[이미지URL]",
+            category: "영화"
+        },
+        // ... 다른 영화들
+    ],
+    // ... 다른 날짜들
+};
+
+// 방송사 온에어 링크 가져오기 함수
+function getOnAirLink(channel) {
+    // KBS1, KBS2는 모두 KBS 링크로 연결
+    if (channel.includes('KBS')) return BROADCAST_LINKS.KBS;
+    // 나머지 방송사는 각각의 링크로 연결
+    return BROADCAST_LINKS[channel] || '#';
+};

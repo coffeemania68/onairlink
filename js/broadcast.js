@@ -1,6 +1,4 @@
-네, broadcast.js 파일을 js 폴더에 생성하고 아래 코드를 넣으면 됩니다:
-
-Copy// 지상파 방송 프로그램 데이터
+// 지상파 방송 프로그램 데이터
 const broadcastPrograms = {
     "2025-01-27": {
         "KBS": [
@@ -45,9 +43,17 @@ const broadcastPrograms = {
     }
 };
 
+// 방송사별 온에어 링크
+const BROADCAST_LINKS = {
+    KBS: "https://naver.me/FWJUsmCX",
+    MBC: "https://naver.me/xXrv590N",
+    SBS: "https://naver.me/FJHYQIPf"
+};
+
 // 초기화
 document.addEventListener('DOMContentLoaded', () => {
     initializeDateTabs();
+    displayPrograms('2025-01-27'); // 첫 날짜 프로그램 표시
 });
 
 // 날짜 탭 초기화
@@ -62,9 +68,6 @@ function initializeDateTabs() {
             displayPrograms(tab.dataset.date);
         });
     });
-
-    // 첫 날짜의 프로그램 표시
-    displayPrograms('2025-01-27');
 }
 
 // 프로그램 표시
@@ -75,10 +78,10 @@ function displayPrograms(date) {
     // 프로그램 목록 초기화
     programList.innerHTML = `<h3 class="text-xl font-bold mb-4">${formatDate(date)}</h3>`;
 
-    if (!dayPrograms) {
+    if (!dayPrograms || Object.keys(dayPrograms).length === 0) {
         programList.innerHTML += `
             <div class="text-center py-8 text-gray-500">
-                이 날의 방송 프로그램이 없습니다
+                이 날의 특선 프로그램이 없습니다
             </div>
         `;
         return;
@@ -100,8 +103,8 @@ function displayPrograms(date) {
 
     // 프로그램 표시
     allPrograms.forEach(program => {
-        const programElement = createProgramElement(program);
-        programList.appendChild(programElement);
+        const element = createProgramElement(program);
+        programList.appendChild(element);
     });
 }
 
@@ -118,7 +121,11 @@ function createProgramElement(program) {
                 <span class="px-3 py-1 rounded-full text-sm bg-gray-200">${program.type}</span>
             </div>
         </div>
-        <h4 class="text-xl font-bold">${program.title}</h4>
+        <h4 class="text-xl font-bold mb-2">${program.title}</h4>
+        <a href="${BROADCAST_LINKS[program.channel]}" target="_blank" 
+           class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-all">
+            실시간 시청하기
+        </a>
     `;
 
     return div;

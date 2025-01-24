@@ -1,43 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>트로트 허브</title>
-    <description>트로트 관련 정보를 제공하는 사이트입니다.</description>
-    <link>https://trot.drivemoments.kr</link>
-    <atom:link href="https://trot.drivemoments.kr/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Jan 2024 00:00:00 +0900</pubDate>
-    <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0900</lastBuildDate>
+    <title>2025 설날 특선 TV</title>
+    <description>2025년 설날 특선 영화 및 프로그램 편성표</description>
+    <link>https://tv.drivemoments.kr</link>
+    <atom:link href="https://tv.drivemoments.kr/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>  <!-- 날짜 업데이트 -->
+    <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0900</lastBuildDate>
 
     <item>
-      <title>트로트 허브 메인</title>
-      <link>https://trot.drivemoments.kr/</link>
-      <description>트로트 허브의 메인 페이지입니다.</description>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0900</pubDate>
-      <guid>https://trot.drivemoments.kr/</guid>
+      <title>2025 설날 특선 프로그램</title>
+      <link>https://tv.drivemoments.kr/</link>
+      <description>2025년 설날 특선 프로그램 편성표</description>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
+      <guid>https://tv.drivemoments.kr/</guid>
     </item>
 
     <item>
-      <title>트로트 킹</title>
-      <link>https://trot.drivemoments.kr/shows/king.html</link>
-      <description>트로트 킹 관련 내용을 제공하는 페이지입니다.</description>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0900</pubDate>
-      <guid>https://trot.drivemoments.kr/shows/king.html</guid>
+      <title>지상파 채널</title>
+      <link>https://tv.drivemoments.kr/channels/broadcast.html</link>
+      <description>KBS, MBC, SBS 설날 특선 프로그램</description>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
+      <guid>https://tv.drivemoments.kr/channels/broadcast.html</guid>
     </item>
 
     <item>
-      <title>트로트 탑텐</title>
-      <link>https://trot.drivemoments.kr/shows/topten.html</link>
-      <description>트로트 탑텐 관련 내용을 제공하는 페이지입니다.</description>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0900</pubDate>
-      <guid>https://trot.drivemoments.kr/shows/topten.html</guid>
-    </item>
-
-    <item>
-      <title>트로트</title>
-      <link>https://trot.drivemoments.kr/shows/trot.html</link>
-      <description>트로트 관련 내용을 제공하는 페이지입니다.</description>
-      <pubDate>Mon, 08 Jan 2024 00:00:00 +0900</pubDate>
-      <guid>https://trot.drivemoments.kr/shows/trot.html</guid>
+      <title>종편 채널</title>
+      <link>https://tv.drivemoments.kr/channels/cable.html</link>
+      <description>JTBC, TV조선, MBN 설날 특선 프로그램</description>
+      <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
+      <guid>https://tv.drivemoments.kr/channels/cable.html</guid>
     </item>
   </channel>
 </rss>
+Sitemap: https://tv.drivemoments.kr/sitemap.xml
+        <loc>https://tv.drivemoments.kr/channels/cable.html</loc>
+        <lastmod>2025-01-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>

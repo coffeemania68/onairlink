@@ -68,9 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeDateTabs();
     setupMobileMenu();
     setupLazyLoading();
+    adjustLayout(); // 광고 레이아웃 초기 조정
 });
 
-// 날짜 탭 초기화
+// 날짜 탭 초기화 (기존 함수 수정)
 function initializeDateTabs() {
     const tabs = document.querySelectorAll('.date-tab');
     tabs.forEach(tab => {
@@ -87,58 +88,70 @@ function initializeDateTabs() {
     selectAppropriateTab();
 }
 
-// 현재 시간에 맞는 탭 선택
-function selectAppropriateTab() {
-    const now = new Date();
-    const dateStr = now.toISOString().split('T')[0];
-    let appropriateDate = Object.keys(holidayPrograms)
-        .find(date => date >= dateStr) || Object.keys(holidayPrograms)[0];
-
-    const tab = document.querySelector(`[data-date="${appropriateDate}"]`);
-    if (tab) {
-        tab.click();
-    }
-}
-
-// 프로그램 표시 함수
+// 프로그램 표시 함수 (수정)
 function displayPrograms(date) {
     const now = new Date();
     const programData = holidayPrograms[date];
 
-    Object.keys(programData).forEach(channel => {
+    Object.keys(programData || {}).forEach(channel => {
         const container = document.getElementById(`${channel.toLowerCase()}-programs`);
         if (!container) return;
 
         container.innerHTML = ''; // 기존 내용 비우기
         
-        programData[channel]
+        const programs = programData[channel]
             .filter(program => {
                 // 지난 방송 필터링
                 const programTime = new Date(`${date} ${program.time}`);
                 return programTime > now;
-            })
-            .forEach(program => {
-                const programElement = createProgramElement(program);
-                container.appendChild(programElement);
             });
+
+        if (programs.length === 0) {
+            // 프로그램이 없는 경우 메시지 표시
+            container.innerHTML = `
+                <div class="text-center py-4 text-gray-500">
+                    이 날의 특선 프로그램이 없습니다
+                </div>
+            `;
+        } else {
+            // 프로그램 목록 표시
+            programs.forEach(program => {
+                container.appendChild(createProgramElement(program));
+            });
+        }
     });
 }
 
-// 프로그램 요소 생성
+/// 프로그램 요소 생성 (수정: hover 효과 추가)
 function createProgramElement(program) {
     const div = document.createElement('div');
-    div.className = 'program-item mb-3 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all';
+    div.className = 'program-item mb-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all cursor-pointer';
     
     div.innerHTML = `
-        <div class="flex justify-between items-center">
-            <span class="text-gray-600">${program.time}</span>
-            <span class="text-sm px-2 py-1 bg-gray-200 rounded">${program.type}</span>
+        <div class="flex justify-between items-center mb-2">
+            <span class="text-gray-600 text-lg">${program.time}</span>
+            <span class="px-3 py-1 bg-gray-200 rounded-full text-sm font-medium">${program.type}</span>
         </div>
-        <h3 class="text-lg font-bold mt-1">${program.title}</h3>
+        <h3 class="text-xl font-bold mb-1">${program.title}</h3>
         ${program.channel ? `<span class="text-sm text-gray-500">${program.channel}</span>` : ''}
     `;
 
     return div;
+}
+
+// 광고 레이아웃 조정 함수 (새로 추가)
+function adjustLayout() {
+    const adContainer = document.getElementById('ad-container');
+    const header = document.getElementById('main-header');
+    const mainContent = document.getElementById('main-content');
+    
+    if (adContainer && adContainer.offsetHeight > 0) {
+        header.style.top = adContainer.offsetHeight + 'px';
+        mainContent.style.marginTop = (adContainer.offsetHeight + 64) + 'px';
+    } else {
+        header.style.top = '0px';
+        mainContent.style.marginTop = '64px';
+    }
 }
 
 // 모바일 메뉴 설정
@@ -165,3 +178,30 @@ function setupLazyLoading() {
 
     images.forEach(img => imageObserver.observe(img));
 }
+
+// 현재 시간에 맞는 탭 선택
+function selectAppropriateTab() {
+    const now = new Date();
+    const dateStr = now.toISOString().split('T')[0];
+    let appropriateDate = Object.keys(holidayPrograms)
+        .find(date => date >= dateStr) || Object.keys(holidayPrograms)[0];
+
+    const tab = document.querySelector(`[data-date="${appropriateDate}"]`);
+    if (tab) {
+        tab.click();
+    }
+}
+
+// 광고 관련 이벤트 리스너 추가
+window.addEventListener('load', () => {
+    setTimeout(adjustLayout, 1000); // 광고 로드 시간 고려
+});
+
+window.addEventListener('resize', adjustLayout);
+
+// 주기적으로 광고 높이 체크
+setInterval(adjustLayout, 2000);
+이렇게 각 함수와 이벤트 리스너가 올바르게 구분되도록 수정했습니다. 이대로 진행할까요?
+
+This answer isn't good enough?
+Try Mixture-of-Agents

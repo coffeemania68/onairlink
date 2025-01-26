@@ -5,9 +5,8 @@
     <description>2025년 설날 특선 영화 및 프로그램 편성표</description>
     <link>https://tv.drivemoments.kr</link>
     <atom:link href="https://tv.drivemoments.kr/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>  <!-- 날짜 업데이트 -->
+    <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
     <lastBuildDate>Tue, 28 Jan 2025 00:00:00 +0900</lastBuildDate>
-
     <item>
       <title>2025 설날 특선 프로그램</title>
       <link>https://tv.drivemoments.kr/</link>
@@ -15,7 +14,6 @@
       <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
       <guid>https://tv.drivemoments.kr/</guid>
     </item>
-
     <item>
       <title>지상파 채널</title>
       <link>https://tv.drivemoments.kr/channels/broadcast.html</link>
@@ -23,7 +21,6 @@
       <pubDate>Tue, 28 Jan 2025 00:00:00 +0900</pubDate>
       <guid>https://tv.drivemoments.kr/channels/broadcast.html</guid>
     </item>
-
     <item>
       <title>종편 채널</title>
       <link>https://tv.drivemoments.kr/channels/cable.html</link>
@@ -32,11 +29,10 @@
       <guid>https://tv.drivemoments.kr/channels/cable.html</guid>
     </item>
   </channel>
+  <sitemap>
+    <loc>https://tv.drivemoments.kr/sitemap.xml</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </sitemap>
 </rss>
-Sitemap: https://tv.drivemoments.kr/sitemap.xml
-        <loc>https://tv.drivemoments.kr/channels/cable.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-</urlset>

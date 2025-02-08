@@ -79,81 +79,45 @@
         .date-selector {
             -webkit-overflow-scrolling: touch;
         }
-    </style>
-</head>
+    </style>  
 
-<body class="bg-gray-50">
-    <!-- 광고 컨테이너 -->
-    <div id="ad-container">
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-7488656479974609"
-             data-ad-slot="5591237053"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-    </div>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header - 수정됨 -->
+    <header class="fixed top-0 w-full bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-white">지상파 종편 온에어 무료시청</h1>
+        </nav>
+    </header>
 
-<header id="main-header" class="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 fixed w-full z-50 shadow-sm">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div class="text-xl font-bold text-white">
-            <a href="index.html">지상파 종편 온에어 무료시청</a>
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- 쿠팡 파트너스 안내 - 새로운 디자인 -->
+        <div class="mt-16 mx-auto w-[95%] bg-gradient-to-r from-white to-gray-50 border border-gray-100 rounded-lg p-4 mb-5 shadow-sm">
+            <p class="text-gray-600 text-sm leading-relaxed text-center">
+                🤝 이 포스팅은 <span class="text-blue-600 font-bold">쿠팡 파트너스 활동</span>의 일환으로, 
+                이에 따른 일정액의 <span class="text-green-600 font-bold">수수료를 제공받습니다</span>.
+            </p>
         </div>
-    </nav>
-</header>
-    
-<div class="mt-16" style="
-    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,240,255,0.7));
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    text-align: center;
-">
-    <p style="
-        color: #4a4a4a;
-        font-size: 14px;
-        line-height: 1.6;
-    ">
-        🤝 이 포스팅은 <span style="color: #1e88e5; font-weight: bold;">쿠팡 파트너스 활동</span>의 일환으로, 
-        이에 따른 일정액의 <span style="color: #4caf50; font-weight: bold;">수수료를 제공받습니다</span>.
-    </p>
-</div>
-            <!-- 쿠팡 프로모션 배너 -->
-<div class="w-[95%] mx-auto mb-6">
-    <a href="https://link.coupang.com/a/cddeKK" class="block">
-        <div class="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-[1.02]">
-            <div class="p-6 flex flex-col md:flex-row items-center justify-between">
-                <div class="mb-4 md:mb-0 md:mr-6">
-                    <h3 class="text-2xl font-bold mb-2">로켓프레시<br>알뜰구매 득템찬스</h3>
-                    <p class="text-lg opacity-80">놓치지 마세요</p>
+
+        <!-- 쿠팡 프로모션 배너 - 새로운 디자인 -->
+        <div class="w-[95%] mx-auto mb-6">
+            <a href="https://link.coupang.com/a/cdKis4" class="block">
+                <div class="bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 text-white rounded-xl shadow-lg overflow-hidden transform transition-all hover:scale-[1.02]">
+                    <div class="p-3 flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-2 md:mb-0 md:mr-6">
+                            <h3 class="text-xl font-bold mb-1">Galaxy S25 Series 최저가</h3>
+                            <p class="text-sm opacity-80">놓치지 마세요</p>
+                        </div>
+                        <div>
+                            <span class="px-4 py-2 bg-white text-black font-bold rounded-full text-base hover:bg-gray-100 transition-all">
+                                지금 바로가기
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <span class="px-6 py-3 bg-white text-black font-bold rounded-full text-lg hover:bg-gray-100 transition-all">
-                        지금 바로가기
-                    </span>
-                </div>
-            </div>
+            </a>
         </div>
-    </a>
-</div>
-              
-        <!-- 광고 고지 및 인사말 -->
-        <div class="mt-8 space-y-4">
-            <div class="bg-gray-50 p-4 rounded-lg text-gray-600 text-sm">
-                <p class="mb-2">※ 실시간 방송 시청 시 각 방송사의 광고(15~30초)가 송출될 수 있습니다.</p>
-              </div>
-        </div>
-    </div>
-    </main>
 
-    <footer class="bg-gray-100 mt-12 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
-            <p>2025 스마트폰으로 실시간 TV 시청하기</p>
-        </div>
-    </footer>
-
-           
 <!-- 방송사별 바로가기 섹션 -->
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-8">
             <!-- KBS -->
@@ -208,9 +172,9 @@
        <span class="font-medium">링크 공유하기</span>
    </button> 
 </div>
-
-                       
-    <footer class="bg-gray-100 mt-12 py-8">
+</main>
+                        
+<footer class="bg-gray-100 mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600">
                 <p>웹사이트 제작: <a href="https://drivemoments.kr" class="text-blue-600 hover:text-blue-800">DriveM</a></p>
                 <div class="hidden sm:block text-gray-400">|</div>
@@ -220,6 +184,7 @@
     </footer>
 
             <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.3.0/kakao.min.js"></script>
+    
 <script>
 // 카카오 SDK 초기화 및 공유 함수
 Kakao.init('110d468a677132abc8ddfe71b00c3939');
@@ -258,6 +223,6 @@ function shareKakao() {
 }
 </script>
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
